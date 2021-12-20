@@ -1,6 +1,6 @@
 # WeatherAPI-Android
 
-An android weather app made using openweathermaps api for one week weather forecast.
+An android weather app made using openweathermaps api. It fetches data for one week weather forecast.
 
 
 <img src="Screenshot_1639750949.png" width="300" height="600">
