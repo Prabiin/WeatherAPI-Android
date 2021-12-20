@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://api.openweathermap.org/data/2.5/weather?q=kathmandu&appid=c16053c68dd00729de4c0dd32b00c986";
+        String url = "https://api.openweathermap.org/data/2.5/weather?q=kathmandu&appid={API_KEY}";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
 
-                        String url1 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=alerts,minutely,hourly&appid=c16053c68dd00729de4c0dd32b00c986";
+                        String url1 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=alerts,minutely,hourly&appid={API_KEY};
                         JsonObjectRequest jsonObjectRequest1 = new JsonObjectRequest(Request.Method.GET, url1, null,
                                 new Response.Listener<JSONObject>() {
                                     @Override
@@ -478,7 +478,7 @@ public class MainActivity extends AppCompatActivity {
                 if(searched_city.equals("")){
                     Toast.makeText(getApplicationContext(), "Please enter city name", Toast.LENGTH_SHORT).show();
                 } else {
-                    String url = "https://api.openweathermap.org/data/2.5/weather?q=" + searched_city + "&appid=c16053c68dd00729de4c0dd32b00c986";
+                    String url = "https://api.openweathermap.org/data/2.5/weather?q=" + searched_city + "&appid={API_KEY}";
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                             new Response.Listener<JSONObject>() {
                                 @Override
@@ -511,7 +511,7 @@ public class MainActivity extends AppCompatActivity {
                                         e.printStackTrace();
                                     }
 
-                                    String url1 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=alerts,minutely,hourly&appid=c16053c68dd00729de4c0dd32b00c986";
+                                    String url1 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=alerts,minutely,hourly&appid={API_KEY}";
                                     JsonObjectRequest jsonObjectRequest1 = new JsonObjectRequest(Request.Method.GET, url1, null,
                                             new Response.Listener<JSONObject>() {
                                                 @Override
